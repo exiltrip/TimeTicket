@@ -1,0 +1,102 @@
+header
+  height: 50px
+  width: calc(80% - 30px)
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  padding: 15px
+  .user-lk-link
+    text-decoration: none
+    font-family: Ubuntu
+    color: cornflowerblue
+    font-weight: 500
+    font-size: 1.2rem
+  .user-lk-link:hover
+    color: #3774e5
+  .lk-container-modals
+    height: 50px
+  .header-logo
+    height: 100%
+  .header-modal-lk
+    z-index: 1000
+    top: 70px
+    font-family: Ubuntu
+    text-decoration: none
+    right: calc(10% + 15px)
+    opacity: 1
+    position: absolute
+    transition: all 500ms ease 0s
+    width: 250px
+    border-radius: 12px
+    overflow: hidden
+    box-shadow: rgba(0, 0, 0, 0.235) 0px 10px 40px
+    display: flex
+    flex-direction: column
+  .lk-a
+    text-decoration: none
+    transition: color 0.8s ease
+    color: black
+  .lk-a:hover
+    text-decoration: none
+    transition: color 0.8s ease
+    color: rgba(0, 0, 0, 0.49)
+  .a-nf
+    text-decoration: none
+    color: black
+    margin-top: 10px
+  .lk-top-section
+    padding: 15px
+
+  .lk-bottom-section
+    padding: 15px
+    -webkit-box-flex: 0
+    flex-grow: 0
+    background: rgb(237, 237, 237)
+
+  .header-lk-container
+    cursor: pointer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 38px
+    padding: 8px
+    text-decoration: none
+    border-radius: 10px
+    .user-logo
+      padding-right: 10px
+      height: 100%
+    .user-name
+      color: gray
+      font-family: 'Ubuntu'
+  .header-find-container
+    width: 40%
+    font-size: 1rem
+  .header-find-button
+    font-size: 1rem
+    border: none
+    width: 15%
+    height: 42px
+    border: none
+    border-radius: 0px 25px 25px 0px
+    background: rgba(238, 238, 238, 0.55)
+  .header-find-button:hover
+    background: rgba(238, 238, 238, 0.75)
+    cursor: pointer
+  .header-find
+    font-size: 1rem
+    height: 40px
+    background: rgba(238, 238, 238, 0.55)
+    border: none !important
+    outline: none
+    padding-left: 15px
+    border-radius: 25px 0px 0px 25px
+    width: 80%
+
+  .header-lk-container:hover
+    background: rgba(234, 234, 234, 0.29)
+  .lk-hidden
+    display: none
+@media (max-width: 500px)
+  .header-find-container
+    display: none

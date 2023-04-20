@@ -1,0 +1,81 @@
+.main
+  margin-top: 30px
+  width: calc(80% - 30px)
+  padding: 15px
+  display: flex
+  flex-direction: column
+  .tdn
+    text-decoration: none
+  .main-title
+    font-family: 'Ubuntu'
+    font-size: 2rem
+    margin: 0
+  .main-title-second
+    font-family: 'Ubuntu'
+    font-size: 2rem
+  .main-card-container
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-top: 30px
+
+
+  .main-card-container-groups
+    display: grid
+    width: 100%
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 15px
+    row-gap: 15px
+  .main-card-item-groups
+    border-radius: 15px
+    cursor: pointer
+    padding: 20px
+    width: calc(100% - 40px)
+    font-family: Ubuntu
+    display: flex
+    align-items: end
+    font-size: 2rem
+    height: 250px
+    transition: background 3s ease
+  .main-card-item-groups:hover
+    background-size: 100%
+    transition: background 3s ease
+
+  .conf
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(30, 30, 30, 0.5)), url("../../accets/confa.jpg")
+    background-position: center
+    background-size: 110%
+    color: white
+  .meetup
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(30, 30, 30, 0.5)), url("../../accets/meetup.jpeg")
+    background-position: center
+    background-size: 110%
+    color: white
+  .teambuild
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(30, 30, 30, 0.5)), url("../../accets/teambuild.jpg")
+    background-position: center
+    background-size: 110%
+    color: white
+  .lection
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(30, 30, 30, 0.5)), url("../../accets/lection.webp")
+    background-position: center
+    background-size: 110%
+    color: white
+
+  .main-card-item
+    text-decoration: none
+    color: white
+    width: calc(32% - 30px)
+    height: 170px
+    background: #000
+    border-radius: 15px
+    text-align: center
+    padding: 15px
+    display: flex
+    justify-content: start
+    font-size: 2rem
+    font-family: 'Ubuntu'
+    transition: background 0.8s ease
+  .main-card-item:hover
+    background: rgba(0, 0, 0, 0.65)
+    transition: background 0.8s ease
