@@ -8,6 +8,8 @@ const Search = () => {
     const url = new URL(document.location.href);
     const urlID = (url.searchParams.get('id'));
     const [eventData, setEventData] = useState([])
+
+
     const getData = () => {
         axios.get(`http://185.130.44.124:8000/event/list?search=${urlID}`)
             .then(res => {
@@ -33,6 +35,7 @@ const Search = () => {
                 </NavLink>)}
 
         </div>
+
 
         </main>
     );

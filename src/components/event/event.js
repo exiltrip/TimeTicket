@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './event.sass'
 import axios from "axios";
+import {NavLink} from "react-router-dom";
 const Event = () => {
 
     const url = new URL(document.location.href);
@@ -21,6 +22,9 @@ const Event = () => {
         getData()
     }, [])
 
+    function descriptionRender(){
+        return{__html: eventData.map(data => data.description)}
+    }
 
     return (
         <main className="ev-main">
@@ -37,7 +41,7 @@ const Event = () => {
                         return(<button className="ev-ticket-button" disabled>Купить</button>)
                     }
                     else{
-                        return(<button className="ev-ticket-button">Купить</button>)
+                        return(<NavLink to={`/payment?id=${urlID}&role=base`}> <button className="ev-ticket-button">Купить</button></NavLink>)
                     }
 
                 }
@@ -53,7 +57,7 @@ const Event = () => {
                             return(<button className="ev-ticket-button" disabled>Купить</button>)
                         }
                         else{
-                            return(<button className="ev-ticket-button">Купить</button>)
+                            return(<NavLink to={`/payment?id=${urlID}&role=vip`}><button className="ev-ticket-button">Купить</button></NavLink>)
                         }
 
                     }
@@ -68,7 +72,7 @@ const Event = () => {
                             return(<button className="ev-ticket-button" disabled>Купить</button>)
                         }
                         else{
-                            return(<button className="ev-ticket-button">Купить</button>)
+                            return(<NavLink to={`/payment?id=${urlID}&role=luxury`}><button className="ev-ticket-button">Купить</button></NavLink>)
                         }
 
                     }
@@ -77,7 +81,7 @@ const Event = () => {
             </div>
             <div className="ev-title">О меропириятии</div>
 
-            {eventData.map(data => <h2 className="ev-text">{data.description}</h2>)}
+            {eventData.map(data => <h2 className="ev-text" dangerouslySetInnerHTML={descriptionRender()}></h2>)}
         </main>
     );
 };

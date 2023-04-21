@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import './main.sass'
-import * as events from "events";
 import {NavLink} from "react-router-dom";
 import axios from "axios";
 import EventsLoader from "../loaders/eventsLoader/eventsLoader";

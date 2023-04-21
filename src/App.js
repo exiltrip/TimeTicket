@@ -8,6 +8,8 @@ import Signin from "./components/auth/signin";
 import LkMain from "./components/lk/lk-main";
 import Event from "./components/event/event";
 import Search from "./components/search/search";
+import Payment from "./components/payment/payment";
+import Video from "./components/video/video";
 
 function App() {
 
@@ -39,6 +41,8 @@ function App() {
         <Header isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} logOut={logOut}/>
         <Routes>
           <Route path="/" element={<Main/>} />
+          <Route path="/payment" element={<Payment/>} />
+          <Route path="/video" element={<Video/>} />
           <Route path="/search" element={<Search/>} />
           <Route path="/lk" element={<LkMain isAdmin={isAdmin} isLoggedIn={isLoggedIn} is />} />
           <Route path="/event" element={<Event/>} />

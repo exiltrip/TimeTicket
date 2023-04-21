@@ -79,12 +79,13 @@ const Login = (props) => {
                 setLogin('');
 
 
-                navigate(`../lk?id=${username}`, { replace: true });
+                navigate(`../lk`, { replace: true });
 
                 localStorage.setItem('userLogin', username);
                 localStorage.setItem('access', res.data.access);
                 localStorage.setItem('refresh', res.data.refresh);
                 localStorage.setItem('isAdmin', res.data.is_super_user);
+                localStorage.setItem('userid', res.data.id);
                 props.logIn()
             })
     };
