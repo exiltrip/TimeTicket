@@ -47,7 +47,7 @@ function App() {
           <Route path="/lk" element={<LkMain isAdmin={isAdmin} isLoggedIn={isLoggedIn} is />} />
           <Route path="/event" element={<Event/>} />
           <Route path="/login"  element={<Login Reload={Reload} isLoggedIn={isLoggedIn} setAdmin={setAdmin} setisLoggedIn={setisLoggedIn} logIn={logIn} />}/>
-          <Route path="/register" element={<Signin isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} logIn={logIn} />}/>
+          <Route path="/signin" element={<Signin isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} logIn={logIn} />}/>
 
         </Routes>
       </BrowserRouter>
